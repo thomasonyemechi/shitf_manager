@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::view('/user/dashboard', 'users.index');
 Route::view('/searcshift', 'searchjobs');
+Route::view('/searcshift/1', 'shiftdetails');
+Route::view('/searcshiftdet', 'shiftdetails');
 Route::view('/login', 'login');
 Route::view('/signup', 'signup');
 Route::view('/user/availability', 'users.availability');
@@ -27,3 +29,4 @@ Route::view('/user/pay', 'users.pay');
 
 
 Route::view('/admin/', 'admin.index');
+Route::view('/admin/createshift', 'admin.createshift');

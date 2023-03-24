@@ -32,25 +32,20 @@
                             </span>
                         </a>
                     </div>
-                    <!-- List group -->
                     <ul class="list-group list-group-flush notification-list-scroll">
                         <li class="list-group-item bg-light">
                             <div class="row">
                                 <div class="col">
-                                    <a class="text-body" href="#">
+                                    <a href="#" class="text-body">
                                         <div class="d-flex">
-                                            <img src="{{asset('assets/images/avatar/avatar-1.jpg') }}"
-                                                alt="" class="avatar-md rounded-circle" />
                                             <div class="ms-3">
-                                                <h5 class="fw-bold mb-1">Kristin Watson:</h5>
+                                                <h5 class="fw-bold mb-1">New Booking Available</h5>
                                                 <p class="mb-3">
-                                                    Krisitn Watsan like your comment on course
-                                                    Javascript Introduction!
+                                                    New booking available with 24 peters -rs for fri 17 mar 2023
+                                                    21:30niew details now
+                                                    to accept shift
                                                 </p>
                                                 <span class="fs-6 text-muted">
-                                                    <span><span
-                                                            class="fe fe-thumbs-up text-success me-1"></span>2
-                                                        hours ago,</span>
                                                     <span class="ms-1">2:19 PM</span>
                                                 </span>
                                             </div>
@@ -58,109 +53,15 @@
                                     </a>
                                 </div>
                                 <div class="col-auto text-center me-2">
-                                    <a href="#" class="badge-dot bg-info"
-                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Mark as read">
+                                    <a href="#!" class="badge-dot bg-info" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="Mark as read">
                                     </a>
                                     <div>
-                                        <a href="#" class="bg-transparent"
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
                                             title="Remove">
                                             <i class="fe fe-x text-muted"></i>
                                         </a>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="row">
-                                <div class="col">
-                                    <a class="text-body" href="#">
-                                        <div class="d-flex">
-                                            <img src="{{asset('assets/images/avatar/avatar-2.jpg') }}"
-                                                alt="" class="avatar-md rounded-circle" />
-                                            <div class="ms-3">
-                                                <h5 class="fw-bold mb-1">Brooklyn Simmons</h5>
-                                                <p class="mb-3">
-                                                    Just launched a new Courses React for Beginner.
-                                                </p>
-                                                <span class="fs-6 text-muted">
-                                                    <span><span
-                                                            class="fe fe-thumbs-up text-success me-1"></span>Oct
-                                                        9,</span>
-                                                    <span class="ms-1">1:20 PM</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-auto text-center me-2">
-                                    <a href="#" class="badge-dot bg-secondary"
-                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Mark as unread">
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="row">
-                                <div class="col">
-                                    <a class="text-body" href="#">
-                                        <div class="d-flex">
-                                            <img src="{{asset('assets/images/avatar/avatar-3.jpg') }}"
-                                                alt="" class="avatar-md rounded-circle" />
-                                            <div class="ms-3">
-                                                <h5 class="fw-bold mb-1">Jenny Wilson</h5>
-                                                <p class="mb-3">
-                                                    Krisitn Watsan like your comment on course
-                                                    Javascript Introduction!
-                                                </p>
-                                                <span class="fs-6 text-muted">
-                                                    <span><span
-                                                            class="fe fe-thumbs-up text-info me-1"></span>Oct
-                                                        9,</span>
-                                                    <span class="ms-1">1:56 PM</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-auto text-center me-2">
-                                    <a href="#" class="badge-dot bg-secondary"
-                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Mark as unread">
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="row">
-                                <div class="col">
-                                    <a class="text-body" href="#">
-                                        <div class="d-flex">
-                                            <img src="{{asset('assets/images/avatar/avatar-4.jpg') }}"
-                                                alt="" class="avatar-md rounded-circle" />
-                                            <div class="ms-3">
-                                                <h5 class="fw-bold mb-1">Sina Ray</h5>
-                                                <p class="mb-3">
-                                                    You earn new certificate for complete the Javascript
-                                                    Beginner course.
-                                                </p>
-                                                <span class="fs-6 text-muted">
-                                                    <span><span
-                                                            class="fe fe-award text-warning me-1"></span>Oct
-                                                        9,</span>
-                                                    <span class="ms-1">1:56 PM</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-auto text-center me-2">
-                                    <a href="#" class="badge-dot bg-secondary"
-                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Mark as unread">
-                                    </a>
                                 </div>
                             </div>
                         </li>
@@ -182,70 +83,38 @@
                         class="rounded-circle" />
                 </div>
             </a>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+            <div class="dropdown-menu dropdown-menu-end shadow">
                 <div class="dropdown-item">
                     <div class="d-flex">
                         <div class="avatar avatar-md avatar-indicators avatar-online">
-                            <img alt="avatar" src="{{asset('assets/images/avatar/avatar-1.jpg') }}"
+                            <img alt="avatar" src="../assets/images/avatar/avatar-1.jpg"
                                 class="rounded-circle" />
                         </div>
                         <div class="ms-3 lh-1">
-                            <h5 class="mb-1">Annette Black</h5>
-                            <p class="mb-0 text-muted">annette@geeksui.com</p>
+                            <h5 class="mb-1">Bril John</h5>
+                            <p class="mb-0 text-muted">john@doe.com</p>
                         </div>
                     </div>
                 </div>
                 <div class="dropdown-divider"></div>
                 <ul class="list-unstyled">
-                    <li class="dropdown-submenu dropstart-lg">
-                        <a class="dropdown-item dropdown-list-group-item dropdown-toggle"
-                            href="#">
-                            <i class="fe fe-circle me-2"></i> Status
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <span class="badge-dot bg-success me-2"></span> Online
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <span class="badge-dot bg-secondary me-2"></span> Offline
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <span class="badge-dot bg-warning me-2"></span> Away
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <span class="badge-dot bg-danger me-2"></span> Busy
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+
                     <li>
-                        <a class="dropdown-item" href="../profile-edit.html">
-                            <i class="fe fe-user me-2"></i> Profile
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="../student-subscriptions.html">
-                            <i class="fe fe-star me-2"></i> Subscription
+                        <a class="dropdown-item" href="#">
+                            <i class="fe fe-user me-2"></i>Profile
                         </a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="#">
-                            <i class="fe fe-settings me-2"></i> Settings
+                            <i class="fe fe-settings me-2"></i>Settings
                         </a>
                     </li>
                 </ul>
                 <div class="dropdown-divider"></div>
                 <ul class="list-unstyled">
                     <li>
-                        <a class="dropdown-item" href="index.html">
-                            <i class="fe fe-power me-2"></i> Sign Out
+                        <a class="dropdown-item" href="#">
+                            <i class="fe fe-power me-2"></i>Sign Out
                         </a>
                     </li>
                 </ul>

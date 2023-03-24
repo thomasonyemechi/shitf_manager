@@ -4,7 +4,11 @@
 
 <nav class="navbar navbar-expand-lg navbar-default">
     <div class="container-fluid px-0">
-        <a class="navbar-brand" href="/"><img src="../assets/images/brand/logo/logo.svg" alt="" /></a>
+        <a class="navbar-brand align-middle" href="/">
+
+            <h2 class="text-primary mt-2 fw-bold align-middle" >ShiftMG</h2>
+            
+            {{-- <img src="../assets/images/brand/logo/logo.svg" alt="" /></a> --}}
         <!-- Mobile view nav wrap -->
 
         @if ($logged == 0)

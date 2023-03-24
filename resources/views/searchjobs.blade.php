@@ -112,8 +112,7 @@
                                             <div class="row g-0">
                                                 <div class="card-body">
                                                     <h4 class="mb-2 text-truncate-line-2 "><a href="#"
-                                                            class="text-inherit">Vue.js Components
-                                                            Fundamentals</a>
+                                                            class="text-inherit">Support Worker</a>
                                                     </h4>
                                                     <ul class="mb-2 list-inline">
                                                         <li class="list-inline-item"><i class="far fa-clock me-1"></i>Peterborough <span>|</span>
@@ -130,8 +129,8 @@
                                                         <i class="bold text-xs" >Posted 28 minutes ago</i>
                                                     </div>
                                                     <div class=" mt-2 justify-content-between" >
-                                                        <a href="#" class="btn btm-xs btn-success mb-2">Accept Shift</a>
-                                                        <a href="#" class="btn btm-xs btn-primary mb-2">Read More</a>
+                                                        <a href="/searcshift/1" class="btn btm-xs btn-success mb-2">Accept Shift</a>
+                                                        <a href="/searcshift/1" class="btn btm-xs btn-primary mb-2">Read More</a>
                                                     </div>
                                                 </div>
                                             </div>
