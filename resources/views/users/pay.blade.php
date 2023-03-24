@@ -41,7 +41,7 @@
                                             <div class="d-flex justify-content-center align-items-center">
                                                 <div class="align-items-center">
                                                     <h2 class="mt-4 fw-bold text-center mb-1 h1 lh-1">
-                                                        $467.34
+                                                        $467777.34
                                                     </h2>
 
                                                     <form class="row " action="">
