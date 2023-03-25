@@ -24,14 +24,14 @@
     <link href="{{ asset('assets/libs/tiny-slider/dist/tiny-slider.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/libs/tippy.js/dist/tippy.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 
 
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/theme.min.css') }}">
-    <title>{{env('APP_NAME')}} |  @yield('title') </title>
+    <title>{{ env('APP_NAME') }} | @yield('title') </title>
 </head>
 
 <body>
@@ -74,10 +74,36 @@
     <script src="{{ asset('assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js') }}"></script>
     <script src="{{ asset('assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js') }}"></script>
     <script src="{{ asset('assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js') }}"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="{{ asset('assets/js/theme.min.js') }}"></script>
 
+    @if (@session('error'))
+        <script>
+            Toastify({
+                text: `{{ session('error') }}`,
+                className: "danger",
+                duration: 3000
+            }).showToast();
+        </script>
+    @endif
+
+
+    @if (@session('success'))
+        <script>
+            Toastify({
+                text: `{{ session('success') }}`,
+                className: "success",
+                duration: 3000
+            }).showToast();
+        </script>
+    @endif
+
+
+
+
     @stack('scripts')
+
+
 </body>
 
 

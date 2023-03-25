@@ -11,7 +11,7 @@
             {{-- <img src="../assets/images/brand/logo/logo.svg" alt="" /></a> --}}
         <!-- Mobile view nav wrap -->
 
-        @if ($logged == 0)
+        @if (!Auth::user())
             <ul class="navbar-nav navbar-right-wrap ms-auto d-lg-none d-flex nav-top-wrap">
                 <li class="dropdown d-inline-block stopevent">
                     <button class="btn btn-outline-white btn-xs me-2" style="border: 1px solid #036;border-radius: 1px;"
@@ -204,7 +204,7 @@
                 </span>
                 <input type="search" class="form-control ps-6" placeholder="Search For Shifts" />
             </form>
-            @if ($logged == 0)
+            @if (!Auth::user())
                 <ul class="navbar-nav navbar-right-wrap ms-auto d-none d-lg-block">
 
                     <li class="dropdown d-inline-block stopevent">
