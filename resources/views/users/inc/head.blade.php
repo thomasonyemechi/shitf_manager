@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div>
-                <a href="#" class="btn btn-outline-primary btn-sm d-none d-md-block">My Profile</a>
+                <a href="/user/viewprofile" class="btn btn-outline-primary btn-sm d-none d-md-block">My Profile</a>
             </div>
         </div>
     </div>

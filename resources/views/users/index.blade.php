@@ -17,60 +17,169 @@
 
                 </div>
                 <div class="col-lg-9 col-md-8 col-12">
-
                     <div class="row">
-                        <div class="col-lg-4 col-md-12 col-12">
-                            <!-- Card -->
+						<div class="col-lg-3 col-md-12 col-12">
+							<!-- Card -->
+							<div class="card mb-4">
+								<!-- Card body -->
+								<div class="p-4">
+									<span class="icon-shape icon-sm bg-light-primary text-dark-primary rounded-3"><i
+											class="fe fe-clock"></i></span>
+									<h2 class="h1 fw-bold mb-0 mt-4 lh-1">100hrs</h2>
+									<p>Total time spent month</p>
+									<div class="progress bg-light-primary" style="height: 2px">
+										<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-12 col-12">
+							<!-- Card body -->
+							<div class="card mb-4">
+								<!-- Card body -->
+								<div class="p-4">
+									<span class="icon-shape icon-sm bg-light-danger text-dark-danger rounded-3"><i
+											class="fe fe-dollar-sign"></i></span>
+									<h2 class="h1 fw-bold mb-0 mt-4 lh-1">
+										$3,800
+									</h2>
+									<p>Total earning</p>
+									<div class="progress bg-light-danger" style="height: 2px">
+										<div class="progress-bar bg-danger" role="progressbar" style="width: 45%" aria-valuenow="45"
+											aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-12 col-12">
+							<!-- Card body -->
+							<div class="card mb-4">
+								<!-- Card body -->
+								<div class="p-4">
+									<span class="icon-shape icon-sm bg-light-warning text-dark-warning rounded-3"><i
+											class="fe fe-send"></i></span>
+									<h2 class="h1 fw-bold mb-0 mt-4 lh-1">
+										89
+									</h2>
+									<p>Total Shift Request</p>
+									<div class="progress bg-light-warning" style="height: 2px">
+										<div class="progress-bar bg-warning" role="progressbar" style="width: 35%" aria-valuenow="35"
+											aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="col-lg-3 col-md-12 col-12">
+							<!-- Card body -->
+							<div class="card mb-4">
+								<!-- Card body -->
+								<div class="p-4">
+									<span class="icon-shape icon-sm bg-light-warning text-dark-warning rounded-3"><i
+											class="fe fe-clock"></i></span>
+									<h2 class="h1 fw-bold mb-0 mt-4 lh-1">
+										10
+									</h2>
+									<p>Pending Shift Request</p>
+									<div class="progress bg-light-warning" style="height: 2px">
+										<div class="progress-bar bg-warning" role="progressbar" style="width: 35%" aria-valuenow="35"
+											aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="row">
+						<div class="col-lg-3 col-md-12 col-12">
+							<!-- Card -->
+							<div class="card mb-4">
+								<!-- Card body -->
+								<div class="p-4">
+									<span class="icon-shape icon-sm bg-light-primary text-dark-primary rounded-3"><i
+											class="fe fe-calendar"></i></span>
+									<h2 class="h1 fw-bold mb-0 mt-4 lh-1">8</h2>
+									<p>Upcoming Shifts</p>
+									<div class="progress bg-light-primary" style="height: 2px">
+										<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-12 col-12">
+							<!-- Card body -->
+							<div class="card mb-4">
+								<!-- Card body -->
+								<div class="p-4">
+									<span class="icon-shape icon-sm bg-light-danger text-dark-danger rounded-3"><i
+											class="fe fe-check-circle"></i></span>
+									<h2 class="h1 fw-bold mb-0 mt-4 lh-1">
+										100
+									</h2>
+									<p>Total Finished Shifts</p>
+									<div class="progress bg-light-danger" style="height: 2px">
+										<div class="progress-bar bg-danger" role="progressbar" style="width: 45%" aria-valuenow="45"
+											aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-12">
                             <div class="card mb-4">
-                                <div class="p-4">
-                                    <span class="fs-6 text-uppercase fw-semi-bold">Revenue</span>
-                                    <h2 class="mt-4 fw-bold mb-1 d-flex align-items-center h1 lh-1">
-                                        $467.34
-                                    </h2>
-                                    <span class="d-flex justify-content-between align-items-center">
-                                        <span>Earning this month</span>
-                                        <span class="badge bg-success ms-2">$203.23</span>
-                                    </span>
+                                <div class="card-header">
+                                    <h3 class="h4 mb-0">Finished Shift</h3>
                                 </div>
-                            </div>
+                                <div class="card-body">
+                                    <div id="orderColumn" class="apex-charts"></div>
+                                </div>
+				            </div>
                         </div>
-
-                        <div class="col-lg-4 col-md-12 col-12">
+                        <div class="col-lg-6 col-md-12 col-12">
                             <div class="card mb-4">
-                                <div class="p-4">
-                                    <span class="fs-6 text-uppercase fw-semi-bold">students Enrollments</span>
-                                    <h2 class="mt-4 fw-bold mb-1 d-flex align-items-center h1 lh-1">
-                                        12,000
-                                    </h2>
-                                    <span class="d-flex justify-content-between align-items-center">
-                                        <span>New this month</span>
-                                        <span class="badge bg-info ms-2">120+</span>
-                                    </span>
+                                <div class="card-header">
+                                    <h3 class="h4 mb-0">Total Earning</h3>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 col-12">
-                            <div class="card mb-4">
-                                <div class="p-4">
-                                    <span class="fs-6 text-uppercase fw-semi-bold">Courses Rating</span>
-                                    <h2 class="mt-4 fw-bold mb-1 d-flex align-items-center h1 lh-1">
-                                        4.80
-                                    </h2>
-                                    <span class="d-flex justify-content-between align-items-center">
-                                        <span>Rating this month</span>
-                                        <span class="badge bg-warning ms-2">10+</span>
-                                    </span>
+                                <div class="card-body">
+                                    <div id="earning" class="apex-charts"></div>
                                 </div>
-                            </div>
+				            </div>
                         </div>
                     </div>
-
-					<div class="card mb-4">
-						<div class="card-header">
-							<h3 class="h4 mb-0">Earnings</h3>
+                    <div class="card mb-4">
+						<!-- Card header -->
+						<div class="card-header border-bottom-0">
+							<h3 class="h4 mb-0">Today's Shift</h3>
 						</div>
-						<div class="card-body">
-							<div id="earning" class="apex-charts"></div>
+						<!-- Table -->
+						<div class="table-responsive border-0">
+							<table class="table mb-0">
+								<!-- Table head -->
+								<thead class="table-light">
+									<tr>
+										<th scope="col" class="border-0">Shift</th>
+										<th scope="col" class="border-0">Company</th>
+										<th scope="col" class="border-0">Duration</th>
+										<th scope="col" class="border-0">Start-Time</th>
+                                        <th scope="col" class="border-0">End-Time</th>
+                                        <th scope="col" class="border-0">Amount</th>
+                                        <th scope="col" class="border-0">Action</th>
+									</tr>
+								</thead>
+								<!-- Table body -->
+								<tbody>
+									<tr>
+										<td class="align-middle border-top-0">Shift Title</td>
+										<td class="align-middle border-top-0">Good Clinic</td>
+										<td class="align-middle border-top-0">Part-time</td>
+                                        <td class="align-middle border-top-0">Morning</td>
+                                        <td class="align-middle border-top-0">Evening</td>
+                                        <td class="align-middle border-top-0">$5,500</td>
+                                        <td class="align-middle border-top-0"><a class="" href="/user/availability"><i class=" "></i>View</a></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
                 </div>

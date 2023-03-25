@@ -26,7 +26,11 @@ Route::view('/signup', 'signup');
 Route::view('/user/availability', 'users.availability');
 Route::view('/user/autoassign', 'users.autoassign');
 Route::view('/user/pay', 'users.pay');
-
+route::view('/user/userdetails','users.userdetails');
+route::view('/user/bookshifts','users.bookshifts');
+route::view('/user/incomegoal','users.incomegoal');
+route::view('/user/bankdetails','users.bankdetails');
+route::view('/user/viewprofile','users.viewprofile');
 
 Route::view('/admin/', 'admin.index');
 Route::view('/admin/createshift', 'admin.createshift');
