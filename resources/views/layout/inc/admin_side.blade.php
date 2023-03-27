@@ -55,6 +55,11 @@
                                 Search User
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/admin/usersrequest">
+                                Request To Join
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>
