@@ -53,9 +53,9 @@
                             </div>
                         </div>
                         <h2 class="fw-bold mb-1">
-                            2,456
+                            {{$data['available']}}
                         </h2>
-                        <span class="text-danger fw-semi-bold">120+</span>
+                        <span class="text-danger fw-semi-bold">{{$data['pending_request']}}+</span>
                         <span class="ms-1 fw-medium">Pending Request</span>
                     </div>
                 </div>
@@ -74,9 +74,9 @@
                             </div>
                         </div>
                         <h2 class="fw-bold mb-1">
-                            1,22,456
+                            {{$data['total_shift']}}
                         </h2>
-                        <span class="text-success fw-semi-bold"><i class="fe fe-trending-up me-1"></i>+1200</span>
+                        <span class="text-success fw-semi-bold"><i class="fe fe-trending-up me-1"></i>+{{$data['completed']}}</span>
                         <span class="ms-1 fw-medium">Completed</span>
                     </div>
                 </div>
@@ -95,9 +95,9 @@
                             </div>
                         </div>
                         <h2 class="fw-bold mb-1">
-                            22,786
+                            {{$data['workers']}}
                         </h2>
-                        <span class="text-success fw-semi-bold"><i class="fe fe-trending-up me-1"></i>+200</span>
+                        <span class="text-success fw-semi-bold"><i class="fe fe-trending-up me-1"></i>+{{$data['active_workers']}}</span>
                         <span class="ms-1 fw-medium">Active</span>
                     </div>
                 </div>
@@ -179,61 +179,28 @@
                 <div class="card h-100">
                     <div class="card-header d-flex align-items-center justify-content-between card-header-height">
                         <h4 class="mb-0">Recent Users</h4>
-                        <a href="#" class="btn btn-outline-white btn-sm">View all</a>
+                        <a href="/admin/active_users" class="btn btn-outline-white btn-sm">View all</a>
                     </div>
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
+                            @foreach ($users as $user)
                             <li class="list-group-item px-0 pt-2 ">
                                 <div class="row">
                                     <div class="col-auto">
-                                        <div class="avatar avatar-md avatar-indicators avatar-offline">
-                                            <img alt="avatar" src="{{ asset('assets/images/avatar/avatar-1.jpg') }}"
+                                        <div class="avatar avatar-md avatar-indicators {{ ($user->status == 'active') ? 'avatar-online' : 'avatar-offline' }}">
+                                            <img alt="avatar" src="{{ asset('assets/images/user/user.png') }} "
                                                 class="rounded-circle">
                                         </div>
                                     </div>
                                     <div class="col ms-n3">
-                                        <h4 class="mb-0 h5">Rob Percival</h4>
+                                        <h4 class="mb-0 h5">{{$user->name}} </h4>
                                         <span class="me-2 fs-6">
-                                            rob@shif.com</span>
-                                        <span class="me-2 fs-6">
-                                            14 232 233 322</span>
+                                            {{$user->email}} </span>
+                                        <span class="me-2 fs-6">{{$user->phone}} </span>
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-group-item px-0 pt-2 ">
-                                <div class="row">
-                                    <div class="col-auto">
-                                        <div class="avatar avatar-md avatar-indicators avatar-offline">
-                                            <img alt="avatar" src="{{ asset('assets/images/avatar/avatar-1.jpg') }}"
-                                                class="rounded-circle">
-                                        </div>
-                                    </div>
-                                    <div class="col ms-n3">
-                                        <h4 class="mb-0 h5">Rob Percival</h4>
-                                        <span class="me-2 fs-6">
-                                            rob@shif.com</span>
-                                        <span class="me-2 fs-6">
-                                            14 232 233 322</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-2 ">
-                                <div class="row">
-                                    <div class="col-auto">
-                                        <div class="avatar avatar-md avatar-indicators avatar-offline">
-                                            <img alt="avatar" src="{{ asset('assets/images/avatar/avatar-1.jpg') }}"
-                                                class="rounded-circle">
-                                        </div>
-                                    </div>
-                                    <div class="col ms-n3">
-                                        <h4 class="mb-0 h5">Rob Percival</h4>
-                                        <span class="me-2 fs-6">
-                                            rob@shif.com</span>
-                                        <span class="me-2 fs-6">
-                                            14 232 233 322</span>
-                                    </div>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

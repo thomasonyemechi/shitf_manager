@@ -12,12 +12,12 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link  " href="/admin/createshift">
+                <a class="nav-link  " href="/admin/shift/create">
                     <i class="nav-icon fe fe-file-plus me-2"></i> Create New Shift
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link  " href="#">
+                <a class="nav-link  " href="/admin/shift/request">
                     <i class="nav-icon fe fe-git-pull-request me-2"></i> View Shift Request
                 </a>
             </li>
@@ -46,8 +46,8 @@
                 <div id="usernav" class="collapse " data-bs-parent="#sideNavbar">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link " href="#">
-                                All Users
+                            <a class="nav-link " href="/admin/active_users">
+                                Active Users
                             </a>
                         </li>
                         <li class="nav-item">

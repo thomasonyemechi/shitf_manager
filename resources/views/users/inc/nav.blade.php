@@ -16,12 +16,15 @@
                     </a>
                 </li> --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/dashboard"><i class="fe fe-home nav-icon"></i>Dashboard</a>
+                    <a class="nav-link" href="/user/"><i class="fe fe-home nav-icon"></i>Dashboard</a>
                 </li>
                 
 
                 <li class="nav-item">
                     <a class="nav-link" href="/user/bookshifts"><i class="fe fe-calendar nav-icon"></i> Booked Shifts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/timesheet"><i class="fe fe-clock nav-icon"></i> TimeSheet</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/searcshift"><i class="fe fe-search nav-icon"></i> Discover
@@ -55,7 +58,7 @@
                     <a class="nav-link" href="/user/viewprofile"><i class="fe fe-settings nav-icon"></i>View Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fe fe-key nav-icon"></i>Security</a>
+                    <a class="nav-link" href="#"><i class="fe fe-lock nav-icon"></i>Security</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fe fe-power nav-icon"></i>Sign

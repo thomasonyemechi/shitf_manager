@@ -32,11 +32,11 @@
             <div class="col-lg-12 col-md-12 col-12">
                 <div class="card mb-4">
                     <div class="card-header border-bottom-0">
-                        <form class="d-flex align-items-center">
+                        <form class="d-flex align-items-center" method="get" >
                             <span class="position-absolute ps-3 search-icon">
                                 <i class="fe fe-search"></i>
                             </span>
-                            <input type="search" class="form-control ps-6" placeholder="Search User" />
+                            <input type="search" name="q" class="form-control ps-6" placeholder="Search User" />
                         </form>
                     </div>
                     <div class="table-responsive border-0 overflow-y-hidden">

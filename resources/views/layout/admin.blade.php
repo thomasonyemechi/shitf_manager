@@ -99,6 +99,22 @@
     @endif
 
 
+    <script>
+        $(function() {
+            $('#checkall').on('click', function() {
+                    let val = $(this).val();
+                if (val == 'on') {
+                    $('.tcheck').attr('checked', 'checked');
+                    $(this).val('off');
+                } else {
+                    $('.tcheck').removeAttr('checked');
+                    $(this).val('on');
+                }
+            })
+        })
+    </script>
+
+
 
 
     @stack('scripts')

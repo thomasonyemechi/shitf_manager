@@ -6,6 +6,17 @@
 
 
 @section('page_content')
+    <style>
+        .eeppp-5 {
+            Overflow: hidden;
+            max-height: 5.8rem;
+            min-height: 5.8rem;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5;
+            text-overflow: ellipsis;
+            display: block;
+        }
+    </style>
     <div class="bg-primary py-4 py-lg-6">
         <div class="container">
             <div class="row align-items-center">
@@ -106,37 +117,45 @@
                             <!-- Card -->
 
                             <div class="row">
-                                @for ($i = 1; $i <= 20; $i++)
+                                @foreach ($shifts as $shift)
                                     <div class="col-md-6 col-12">
                                         <div class="card mb-4  card-hover">
                                             <div class="row g-0">
                                                 <div class="card-body">
                                                     <h4 class="mb-2 text-truncate-line-2 "><a href="#"
-                                                            class="text-inherit">Support Worker</a>
+                                                            class="text-inherit">{{ $shift->title }} </a>
                                                     </h4>
                                                     <ul class="mb-2 list-inline">
-                                                        <li class="list-inline-item"><i class="far fa-clock me-1"></i>Peterborough <span>|</span>
-                                                            Up to £15.72 per hour</li>
+                                                            Up to £{{ $shift->salary }} per hour
+                                                        </li>
                                                     </ul>
 
-                                                    <p class="text-small text-truncate-line-5">
-                                                        Deliver person-centred care as a Registered Nurse Bring your nursing
-                                                        training to life and make a difference with Newcross Healthcare.
-                                                        Join our HealthForce community as a Registered Nurse and get paid up to £32.82 
+                                                    <p class="text-small eeppp-5">
+                                                        {{ $shift->description }}
                                                     </p>
 
                                                     <div class="d-flex justify-content-start ">
-                                                        <i class="bold text-xs" >Posted 28 minutes ago</i>
+                                                        <i class="bold text-xs">Posted
+                                                            {{ date('j M, Y', strtotime($shift->created_at)) }}</i>
                                                     </div>
-                                                    <div class=" mt-2 justify-content-between" >
-                                                        <a href="/searcshift/1" class="btn btm-xs btn-success mb-2">Accept Shift</a>
-                                                        <a href="/searcshift/1" class="btn btm-xs btn-primary mb-2">Read More</a>
+                                                    <div class=" mt-2 justify-content-between">
+                                                        <a href="/searcshift/{{ $shift->id }}"
+                                                            class="btn btm-xs btn-success mb-2">Accept
+                                                            Shift</a>
+                                                        <a href="/searcshift/{{ $shift->id }}"
+                                                            class="btn btm-xs btn-primary mb-2">Read
+                                                            More</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                @endfor
+                                @endforeach
+
+                                <div>
+                                    {{$shifts->links('pagination::bootstrap-5')}}
+                                </div>
+
                             </div>
 
                         </div>
@@ -146,3 +165,4 @@
         </div>
     </div>
 @endsection
+

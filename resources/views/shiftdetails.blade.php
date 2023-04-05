@@ -28,7 +28,20 @@
                             <h4 class="mb-3 mb-lg-0"><a href="/searcshift">Back to Shifts</a> </h4>
                         </div>
                         <div class="d-inline-flex col-md-6 col-lg-4 col-xl-3 ">
-                            <button class="btn btn-block btn-primary" style="width: 100%">Accept Shift</button>
+                            @if (auth()->user()->id)
+                                @if ($details['status'] == 'pending')
+                                    <button class="btn btn-block btn-warning disabled " style="width: 100%">Request
+                                        Sent</button>
+                                @elseif ($details['status'] == 'active')
+                                    <button class="btn btn-block btn-success " style="width: 100%">Request Approved</button>
+                                @else
+                                    <button class="btn btn-block btn-primary openModal " style="width: 100%">Request
+                                        Shift</button>
+                                @endif
+                            @else
+                                <button class="btn btn-block btn-primary openModal " style="width: 100%">Request
+                                    Shift</button>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -38,7 +51,7 @@
                     <div class="card  mb-4">
                         <div class="card-body">
                             <div class="mb-5 mt-3">
-                                <h1 class="fw-bold">Support Worker Role</h1>
+                                <h1 class="fw-bold">{{ $shift->title }} Role </h1>
                             </div>
 
                             <div class="row">
@@ -46,23 +59,30 @@
                                     <div class="d-flex">
                                         <div>
                                             <h4 class="mb-0 fw-bold">Date Posted</h4>
-                                            <p class="mb-0 fs-5">21 March 2023</p>
+                                            <p class="mb-0 fs-5">{{ date('j M, Y', strtotime($shift->created_at)) }}</p>
                                         </div>
                                     </div>
                                 </div>
+
+                                <hr class="d-md-none d-sm-block">
+
+
                                 <div class="col-md-4">
                                     <div class="d-flex">
                                         <div>
                                             <h4 class="mb-0 fw-bold">Location </h4>
-                                            <p class="mb-0 fs-5">Canterbury</p>
+                                            <p class="mb-0 fs-5">{{ $shift->location }}</p>
                                         </div>
                                     </div>
                                 </div>
+
+                                <hr class="d-md-none d-sm-block">
+
                                 <div class="col-md-4">
                                     <div class="d-flex">
                                         <div>
                                             <h4 class="mb-0 fw-bold">Discipline</h4>
-                                            <p class="mb-0 fs-5">Healthcare Assistant Jobs</p>
+                                            <p class="mb-0 fs-5">{{ $shift->details }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -73,24 +93,29 @@
                                     <div class="d-flex">
                                         <div>
                                             <h4 class="mb-0 fw-bold">Salary</h4>
-                                            <p class="mb-0 fs-5">Up to £14.99 per hour</p>
+                                            <p class="mb-0 fs-5">Up to £{{ $shift->salary }} per hour</p>
                                         </div>
                                     </div>
                                 </div>
+
+                                <hr class="d-md-none d-sm-block">
 
                                 <div class="col-md-4">
                                     <div class="d-flex">
                                         <div>
                                             <h4 class="mb-0 fw-bold">Reference</h4>
-                                            <p class="mb-0 fs-5">CAN-SN-Cante-MAR23-3</p>
+                                            <p class="mb-0 fs-5">{{ $shift->reference }}</p>
                                         </div>
                                     </div>
                                 </div>
+
+                                <hr class="d-md-none d-sm-block">
+
                                 <div class="col-md-4">
                                     <div class="d-flex">
                                         <div>
                                             <h4 class="mb-0 fw-bold">Job Type</h4>
-                                            <p class="mb-0 fs-5">Permanent</p>
+                                            <p class="mb-0 fs-5">{{ $shift->type }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -108,120 +133,7 @@
                                 <h3 class="fw-semi-bold">Job Description</h3>
 
                                 <article class="desc">
-                                    <div class="job-description ">
-                                        <div class="WordSection1">
-                                            <p>
-                                                <recite class="recite-ele recite-ele-style" style="display: inline;">
-                                                    <strong>Put a smile on someone’s face as a Care Assistant </strong>
-                                                </recite>
-                                            </p>
-                                            <p>
-                                                <recite class="recite-ele recite-ele-style" style="display: inline;">As a
-                                                    Healthcare Assistant at Newcross, you’ll provide hands-on personal care
-                                                    that makes a difference. We’re looking for enthusiastic, compassionate
-                                                    carers in the Bournemouth, Kinson, Wareham area to join our HealthForce
-                                                    community in supporting people’s physical, emotional and mental
-                                                    wellbeing.</recite>
-                                            </p>
-                                            <p>
-                                                <recite class="recite-ele recite-ele-style" style="display: inline;">This
-                                                    Care Assistant role pays up to £15.72 per hour (inc holiday pay). You’ll
-                                                    have the ability to choose flexible shifts that fit around your life.
-                                                    Our HealthForceGo app makes flexible working easy so you can choose
-                                                    whether you work full-time, part-time, day or night shifts.</recite>
-                                            </p>
-                                            <p>
-                                                <recite class="recite-ele recite-ele-style" style="display: inline;">We’re
-                                                    helping Britain get the care service it deserves, and our HCAs make a
-                                                    rewarding difference in people’s lives every day. That’s why we’re an
-                                                    accredited Living Wage Employer with excellent hourly rates and a range
-                                                    of benefits including:</recite>
-                                            </p>
-                                            <ul>
-                                                <li>
-                                                    <recite class="recite-ele recite-ele-style" style="display: inline;">
-                                                        <strong>Same-day pay with FlexiPay: </strong>get instant access to
-                                                        up to 50% of the value of your completed shifts, even on weekends
-                                                        and bank holidays
-                                                    </recite>
-                                                </li>
-                                                <li>
-                                                    <recite class="recite-ele recite-ele-style" style="display: inline;">
-                                                        <strong>Care for the caregiver: </strong>MyHealthPlan gives you
-                                                        healthcare and mental health support and access to in-app virtual
-                                                        appointments with NHS-registered GPs
-                                                    </recite>
-                                                </li>
-                                                <li>
-                                                    <recite class="recite-ele recite-ele-style" style="display: inline;">
-                                                        <strong>Free training: </strong>access Newcross World, our app-based
-                                                        learning platform for carers and nurses, with over 400 free courses
-                                                    </recite>
-                                                </li>
-                                                <li>
-                                                    <recite class="recite-ele recite-ele-style" style="display: inline;">
-                                                        <strong>£500 when you Introduce a Friend: </strong>receive up to
-                                                        £500 when you introduce a friend or family member
-                                                    </recite>
-                                                </li>
-                                                <li>
-                                                    <recite class="recite-ele recite-ele-style" style="display: inline;">
-                                                        <strong>Perks at Work:</strong> benefit from over 30,000 exclusive
-                                                        deals and discounts for your favourite brands across 20 categories,
-                                                        including groceries, fashion, electronics and more
-                                                    </recite>
-                                                </li>
-                                            </ul>
-                                            <p>
-                                                <recite class="recite-ele recite-ele-style" style="display: inline;">
-                                                    <strong>As a Care Assistant, you’ll have:&nbsp; </strong>
-                                                </recite>
-                                            </p>
-                                            <ul>
-                                                <li>
-                                                    <recite class="recite-ele recite-ele-style" style="display: inline;">3
-                                                        months UK personal care experience from within the past 3 years
-                                                    </recite>
-                                                </li>
-                                                <li>
-                                                    <recite class="recite-ele recite-ele-style" style="display: inline;">
-                                                        Good equipment knowledge</recite>
-                                                </li>
-                                                <li>
-                                                    <recite class="recite-ele recite-ele-style" style="display: inline;">
-                                                        Moving and handling experience</recite>
-                                                </li>
-                                                <li>
-                                                    <recite class="recite-ele recite-ele-style" style="display: inline;">
-                                                        Excellent teamwork skills, flexibility and professionalism</recite>
-                                                </li>
-                                                <li>
-                                                    <recite class="recite-ele recite-ele-style" style="display: inline;">The
-                                                        right to work in the UK</recite>
-                                                </li>
-                                            </ul>
-                                            <p>
-                                                <recite class="recite-ele recite-ele-style" style="display: inline;">
-                                                    <strong>Helping Britain get the care service it deserves </strong>
-                                                </recite>
-                                            </p>
-                                            <p>
-                                                <recite class="recite-ele recite-ele-style" style="display: inline;">At
-                                                    Newcross Healthcare, we’re building something to serve people like never
-                                                    before while treating caregivers with the utmost respect. We are focused
-                                                    on finding the right specialist nurses and carers, to provide the right
-                                                    standard of care, in the right places at the right time. To do this, we
-                                                    provide hands-on support and the latest technology so you can focus on
-                                                    doing what you do best.</recite>
-                                            </p>
-                                            <p>
-                                                <recite class="recite-ele recite-ele-style" style="display: inline;">
-                                                    <strong>Apply now to make a real difference today!</strong>
-                                                </recite>
-                                            </p>
-                                        </div>
-                                        <p><strong>&nbsp;</strong></p>
-                                    </div>
+                                    {!! $shift->description !!}
                                 </article>
                             </div>
 
@@ -234,7 +146,7 @@
                     <div class="card border-0 mb-3">
                         <div class="card-body">
                             <h3 class="mb-2">Share This Shift</h3>
-                            <div class="d-flex justify-content-around">
+                            <div class="d-flex justify-content-between">
                                 <a href="#" class="btn-social btn-social-outline btn-facebook">
                                     <i class="fab fa-facebook"></i>
                                 </a>
@@ -259,59 +171,24 @@
                                     Shifts</div>
                             </div>
 
-                            <div class="mb-2 mt-3">
-                                <h4 class="fw-semi-bold mb-1">Community Care Worker</h4>
-
-                                <div class="" >
-                                    <div>
-                                        <i class="fe fe-map-pin me-2 text-primary"></i>United Kingdom
-                                    </div>
-                                    <div>
-                                        <i class="fe fe-clock me-2 text-primary"></i>Permernent
-                                    </div>
-                                    <div>
-                                        <i class="fe fe-credit-card me-2 text-primary"></i>Up to £16.40 per hour
-                                    </div>
-                                </div>
-                            </div>
-
-                            <hr>
-
-
-                            <div class="mb-2 mt-3">
-                                <h4 class="fw-semi-bold mb-1">Community Care Worker</h4>
-
-                                <div class="" >
-                                    <div>
-                                        <i class="fe fe-map-pin me-2 text-primary"></i>United Kingdom
-                                    </div>
-                                    <div>
-                                        <i class="fe fe-clock me-2 text-primary"></i>Permernent
-                                    </div>
-                                    <div>
-                                        <i class="fe fe-credit-card me-2 text-primary"></i>Up to £16.40 per hour
+                            @foreach ($shifts as $shit)
+                                <div class="mb-2 mt-3">
+                                    <h4 class="fw-semi-bold mb-1">{{ $shift->title }} </h4>
+                                    <div class="">
+                                        <div>
+                                            <i class="fe fe-map-pin me-2 text-primary"></i>{{ $shift->location }}
+                                        </div>
+                                        <div>
+                                            <i class="fe fe-clock me-2 text-primary"></i>{{ $shift->type }}
+                                        </div>
+                                        <div>
+                                            <i class="fe fe-credit-card me-2 text-primary"></i>Up to £{{ $shift->salary }}
+                                            per hour
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <hr>
-                            <div class="mb-2 mt-3">
-                                <h4 class="fw-semi-bold mb-1">Community Care Worker</h4>
-
-                                <div class="" >
-                                    <div>
-                                        <i class="fe fe-map-pin me-2 text-primary"></i>United Kingdom
-                                    </div>
-                                    <div>
-                                        <i class="fe fe-clock me-2 text-primary"></i>Permernent
-                                    </div>
-                                    <div>
-                                        <i class="fe fe-credit-card me-2 text-primary"></i>Up to £16.40 per hour
-                                    </div>
-                                </div>
-                            </div>
-
-                            <hr>
+                                <hr>
+                            @endforeach
 
 
                         </div>
@@ -322,4 +199,48 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="accRequestModal" tabindex="-1" role="dialog" aria-labelledby="newCatgoryLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center ">
+
+                    <div class="display-6 fw-bold d-block ">Request this Shift</div>
+                    <ul class="mb-2 list-inline">
+                        Up to £{{ $shift->salary }} per hour | {{ $shift->createdby->name }}
+                        </li>
+                    </ul>
+
+                    <div class="">
+                        <i class="bold text-xs">Posted
+                            {{ date('j M, Y', strtotime($shift->created_at)) }}</i>
+                    </div>
+                    <div class=" mt-2 justify-content-between">
+                        <form action="/requestShift" method="post">@csrf
+                            <input type="hidden" name="shift_id" value="{{ $shift->id }}">
+                            <button type="submit" class="btn btn-primary">Send Request</button>
+                            <button type="button" class="btn btn-outline-white" data-bs-dismiss="modal">
+                                Cancel
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
 @endsection
+
+@push('scripts')
+    <script>
+        $(function() {
+            $('.openModal').on('click', function() {
+                data = $(this).data('data');
+                modal = $('#accRequestModal');
+                modal.modal('show')
+            });
+        })
+    </script>
+@endpush

@@ -94,8 +94,8 @@
                                         class="rounded-circle" />
                                 </div>
                                 <div class="ms-3 lh-1">
-                                    <h5 class="mb-1">Bril John</h5>
-                                    <p class="mb-0 text-muted">john@doe.com</p>
+                                    <h5 class="mb-1">{{auth()->user()->name}} </h5>
+                                    <p class="mb-0 text-muted">{{auth()->user()->email}} </p>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                         <ul class="list-unstyled">
 
                             <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/user/">
                                     <i class="fe fe-user me-2"></i>Profile
                                 </a>
                             </li>
@@ -281,15 +281,15 @@
                                             class="rounded-circle" />
                                     </div>
                                     <div class="ms-3 lh-1">
-                                        <h5 class="mb-1">Bril John</h5>
-                                        <p class="mb-0 text-muted">john@doe.com</p>
+                                        <h5 class="mb-1">{{auth()->user()->name}} </h5>
+                                    <p class="mb-0 text-muted">{{auth()->user()->email}} </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="dropdown-divider"></div>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="/user/">
                                         <i class="fe fe-user me-2"></i>Profile
                                     </a>
                                     <a class="dropdown-item" href="#">

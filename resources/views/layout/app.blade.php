@@ -19,6 +19,10 @@
     <link href="{{ asset('assets/libs/tippy.js/dist/tippy.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/theme.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
     <title>{{ env('APP_NAME') }} | @yield('page_title') </title>
 </head>
 
@@ -60,6 +64,27 @@
     <script src="{{ asset('assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js') }}"></script>
     <script src="{{ asset('cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js') }}"></script>
     <script src="{{ asset('assets/js/theme.min.js') }}"></script>
+
+    @if (@session('error'))
+        <script>
+            Toastify({
+                text: `{{ session('error') }}`,
+                className: "bg-danger",
+                duration: 3000
+            }).showToast();
+        </script>
+    @endif
+
+
+    @if (@session('success'))
+        <script>
+            Toastify({
+                text: `{{ session('success') }}`,
+                className: "success",
+                duration: 3000
+            }).showToast();
+        </script>
+    @endif
 
 
     @stack('scripts')

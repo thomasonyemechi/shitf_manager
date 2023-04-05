@@ -20,94 +20,52 @@
 
 
 
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="mb-0">TimeSheets</h3>
-                        </div>
-                        <div class="card-body">
+                    <div class="card-header mb-3">
+                        <h3 class="mb-0">Book Shifts</h3>
+                    </div>
+                    @foreach ($requests as $request)
+                        <div class="shadow-lg p-3 mb-2 bg-white rounded">
                             <div class="row">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-12 mb-4">
-                        <!-- Card -->
-                        <div class="card h-100">
-                            <!-- Card header -->
-                            <div class="card-header d-flex align-items-center
-                              justify-content-between card-header-height">
-                                <h4 class="mb-0">Available Shifts</h4>
-                                <a href="#" class="btn btn-outline-white btn-sm">View all</a>
-                            </div>
-                            <!-- Card body -->
-                            <div class="card-body">
-                                <!-- List group -->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item px-0 pt-0 ">
-                                        <div class="row">
-                                            <div class="col-auto">
-                                                <div class="avatar avatar-md avatar-indicators avatar-offline">
-                                                    <img alt="avatar" src="../../assets/images/avatar/avatar-1.jpg" class="rounded-circle">
-                                                </div>
-                                            </div>
-                                            <div class="col ms-n3">
-                                                <h4 class="mb-0 h5">myGood Clinic</h4>
-                                                <span class="me-2 fs-6">
-                                                <span class="text-dark  me-1 fw-semi-bold">Date</span>23 April</span>
-                                                <span class="me-2 fs-6">
-                                            </div>
-                                            <div class="col-auto">
-                                            <h4 class="mb-0 h5 text-warning">Pending</h4>
-                                                <span class=""> $2,900
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item px-0 pt-0 ">
-                                        <div class="row">
-                                            <div class="col-auto">
-                                                <div class="avatar avatar-md avatar-indicators avatar-offline">
-                                                    <img alt="avatar" src="../../assets/images/avatar/avatar-1.jpg" class="rounded-circle">
-                                                </div>
-                                            </div>
-                                            <div class="col ms-n3">
-                                                <h4 class="mb-0 h5">MyOnline Clinic</h4>
-                                                <span class="me-2 fs-6">
-                                                <span class="text-dark  me-1 fw-semi-bold">Date</span>23 April</span>
-                                                <span class="me-2 fs-6">
-                                            </div>
-                                            <div class="col-auto">
-                                            <h4 class="mb-0 h5 text-success">Approved</h4>
-                                                <span class=""> $2,900
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item px-0 pt-0 ">
-                                        <div class="row">
-                                            <div class="col-auto">
-                                                <div class="avatar avatar-md avatar-indicators avatar-offline">
-                                                    <img alt="avatar" src="../../assets/images/avatar/avatar-1.jpg" class="rounded-circle">
-                                                </div>
-                                            </div>
-                                            <div class="col ms-n3">
-                                                <h4 class="mb-0 h5">Love Clinic</h4>
-                                                <span class="me-2 fs-6">
-                                                <span class="text-dark  me-1 fw-semi-bold">Date</span>23 April</span>
-                                                <span class="me-2 fs-6">
-                                            </div>
-                                            <div class="col-auto">
-                                            <h4 class="mb-0 h5 text-danger">Rejected</h4>
-                                                <span class=""> $2,900
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </li>
+                                <div class="col">
+                                    <h3 class="mb-0 h3">{{ $request->shift->title }} </h3>
+                                    <span class="me-2 fs-6">
+                                        <span class="text-dark  me-1 fw-semi-bold">request
+                                            date</span>{{ date('j M, Y', strtotime($request->created_at)) }}
+                                    </span>
+                                    <span class="me-2 fs-6">
+                                </div>
+                                <div class="col-auto">
+                                    <h4 class="text-dark  me-1 mb-0 fw-semi-bold">Location:</h4> {{ $request->shift->location }}
+                                    <span class="">up to # {{ $request->shift->salary }} per hour
+                                    </span>
                                     
-                                    <!-- List group -->
-                                </ul>
+                                </div>
+                                <div class="col-auto ">
+                                    @if ($request->status == 'pending')
+                                        <div class="badge bg-warning">
+                                            {{ $request->status }}
+                                        </div>
+                                    @elseif ($request->status == 'approved')
+                                        <div class="badge bg-primary">
+                                            {{ $request->status }}
+                                        </div>
+                                    @elseif ($request->status == 'rejected')
+                                        <div class="badge bg-danger">
+                                            {{ $request->status }}
+                                        </div>
+                                    @elseif ($request->status == 'completed')
+                                        <div class="badge bg-success">
+                                            {{ $request->status }}
+                                        </div>
+                                    @endif
+                                    <div>
+                                        27 Mar, 2023
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>
